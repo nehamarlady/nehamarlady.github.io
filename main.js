@@ -119,4 +119,39 @@ document.addEventListener('DOMContentLoaded', () => {
     revealObserver.observe(el);
   });
 
+
+  /*  5. Project card tag hover  */
+  document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      card.querySelectorAll('.tag').forEach((tag, i) => {
+        tag.style.transition = `background 0.2s ${i * 0.05}s, color 0.2s ${i * 0.05}s`;
+        tag.style.background = 'rgba(20, 184, 166, 0.15)';
+        tag.style.color = '#14B8A6';
+        tag.style.borderColor = 'rgba(20, 184, 166, 0.3)';
+      });
+    });
+    card.addEventListener('mouseleave', () => {
+      card.querySelectorAll('.tag').forEach(tag => {
+        tag.style.background = '';
+        tag.style.color = '';
+        tag.style.borderColor = '';
+      });
+    });
+  });
+
+
+  /*  6. Skill card list hover  */
+  document.querySelectorAll('.skill-card').forEach(card => {
+    const items = card.querySelectorAll('.skill-list li');
+    card.addEventListener('mouseenter', () => {
+      items.forEach((item, i) => {
+        item.style.transition = `color 0.2s ${i * 0.05}s, padding-left 0.2s ${i * 0.05}s`;
+        item.style.paddingLeft = '0.5rem';
+      });
+    });
+    card.addEventListener('mouseleave', () => {
+      items.forEach(item => { item.style.paddingLeft = ''; });
+    });
+  });
+
 });
