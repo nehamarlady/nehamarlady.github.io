@@ -154,4 +154,65 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+
+  /*  7. Contact form validation & submission  */
+  const form        = document.getElementById('contactForm');
+  const submitBtn   = document.getElementById('submitBtn');
+  const btnText     = document.getElementById('btnText');
+  const btnSpinner  = document.getElementById('btnSpinner');
+  const formSuccess = document.getElementById('formSuccess');
+  const formError   = document.getElementById('formError');
+
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      formSuccess.classList.add('d-none');
+      formError.classList.add('d-none');
+
+      if (!form.checkValidity()) {
+        form.classList.add('was-validated');
+        return;
+      }
+
+      const name    = document.getElementById('contactName').value.trim();
+      const email   = document.getElementById('contactEmail').value.trim();
+      const subject = document.getElementById('contactSubject').value.trim();
+      const message = document.getElementById('contactMessage').value.trim();
+
+      btnText.classList.add('d-none');
+      btnSpinner.classList.remove('d-none');
+      submitBtn.disabled = true;
+
+      try {
+        const response = await fetch('https://formspree.io/f/meewgdwa', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({ name, email, subject, message })
+        });
+
+        btnText.classList.remove('d-none');
+        btnSpinner.classList.add('d-none');
+        submitBtn.disabled = false;
+
+        if (response.ok) {
+          formSuccess.classList.remove('d-none');
+          form.reset();
+          form.classList.remove('was-validated');
+          formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          setTimeout(() => formSuccess.classList.add('d-none'), 6000);
+        } else {
+          formError.classList.remove('d-none');
+        }
+      } catch (err) {
+        btnText.classList.remove('d-none');
+        btnSpinner.classList.add('d-none');
+        submitBtn.disabled = false;
+        formError.classList.remove('d-none');
+      }
+    });
+  }
+
 });

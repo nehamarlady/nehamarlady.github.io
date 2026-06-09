@@ -521,3 +521,132 @@ img { max-width: 100%; display: block; }
   font-size: 2.5rem;
   color: var(--muted-dark);
 }
+
+/* CONTACT */
+.contact-card {
+  background: var(--navy-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+}
+
+.form-label {
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+}
+
+.custom-input {
+  background: var(--navy);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--off-white);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 0.65rem 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.custom-input:focus {
+  background: var(--navy);
+  border-color: var(--teal);
+  color: var(--off-white);
+  box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.15);
+  outline: none;
+}
+.custom-input::placeholder { color: var(--muted-dark); }
+.custom-input.is-invalid { border-color: #ef4444; }
+
+.contact-alt-link {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.2s;
+}
+.contact-alt-link:hover { color: var(--teal); }
+
+/*  Alert overrides  */
+.alert-success {
+  background: rgba(20,184,166,0.1);
+  border-color: rgba(20,184,166,0.3);
+  color: var(--teal);
+  border-radius: 8px;
+}
+.alert-danger {
+  background: rgba(239,68,68,0.1);
+  border-color: rgba(239,68,68,0.3);
+  color: #fca5a5;
+  border-radius: 8px;
+}
+.alert-danger a { color: var(--teal); }
+
+/* FOOTER */
+.site-footer {
+  background: var(--navy-alt);
+  border-top: 1px solid var(--border);
+  padding: 2.5rem 0;
+}
+
+.footer-brand {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--off-white);
+  margin-bottom: 0.3rem;
+}
+
+.footer-sub {
+  font-size: 0.82rem;
+  color: var(--muted-dark);
+  margin: 0;
+}
+.footer-sub a { color: var(--teal); transition: opacity 0.2s; }
+.footer-sub a:hover { opacity: 0.7; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .section-pad { padding: 70px 0; }
+
+  .hero-section { padding-top: 100px; }
+  .typewriter-text { white-space: normal; }
+  .tw-cursor { display: none; }
+
+  .hero-links { flex-wrap: wrap; gap: 0.75rem; }
+
+  .about-avatar { width: 160px; height: 160px; }
+
+  .contact-alts { flex-direction: column; align-items: center; gap: 0.75rem; }
+
+  .acc-header-inner { flex-direction: column; align-items: flex-start; }
+  .acc-badge { margin-top: 0.4rem; }
+
+  /* Mobile nav dropdown — sits above page, solid background */
+  #mainNav {
+    z-index: 9999;
+  }
+  #navMenu {
+    background: #0F172A;
+    border-top: 1px solid var(--border);
+    padding: 1rem 0.5rem 1.25rem;
+    margin-top: 0.5rem;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.5);
+  }
+  #navMenu .nav-link {
+    padding: 0.75rem 1rem !important;
+    font-size: 1rem;
+    border-radius: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .typewriter-text { animation: none; }
+  .tw-cursor { animation: none; }
+  .avatar-ring { animation: none; }
+  .terminal-dot { animation: none; }
+  * { transition-duration: 0.01ms !important; }
+}

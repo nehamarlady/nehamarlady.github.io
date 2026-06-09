@@ -363,5 +363,97 @@
     </div>
   </section>
 
+  <!--  CONTACT  -->
+  <section id="contact" class="section-pad">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-7 text-center">
+          <p class="section-eyebrow">Contact</p>
+          <h2 class="section-title">Let's build something together.</h2>
+          <p class="section-sub mb-5">
+            I'm actively looking for <strong>software engineering internships and entry-level roles</strong>.
+            Have a project, opportunity, or just want to say hi? I'd love to hear from you.
+          </p>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-7">
+          <div class="contact-card">
+            <form id="contactForm" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="contactName" class="form-label">Name</label>
+                  <input type="text" class="form-control custom-input" id="contactName"
+                    placeholder="Your name" required />
+                  <div class="invalid-feedback">Please enter your name.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="contactEmail" class="form-label">Email</label>
+                  <input type="email" class="form-control custom-input" id="contactEmail"
+                    placeholder="your@email.com" required />
+                  <div class="invalid-feedback">Please enter a valid email.</div>
+                </div>
+                <div class="col-12">
+                  <label for="contactSubject" class="form-label">Subject</label>
+                  <input type="text" class="form-control custom-input" id="contactSubject"
+                    placeholder="What's this about?" required />
+                  <div class="invalid-feedback">Please enter a subject.</div>
+                </div>
+                <div class="col-12">
+                  <label for="contactMessage" class="form-label">Message</label>
+                  <textarea class="form-control custom-input" id="contactMessage" rows="5"
+                    placeholder="Tell me about your project or opportunity..." required></textarea>
+                  <div class="invalid-feedback">Please enter a message.</div>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-teal w-100" id="submitBtn">
+                    <span id="btnText"><i class="bi bi-send me-2"></i>Send Message</span>
+                    <span id="btnSpinner" class="d-none">
+                      <span class="spinner-border spinner-border-sm me-2"></span>Sending...
+                    </span>
+                  </button>
+                </div>
+                <div class="col-12">
+                  <div id="formSuccess" class="alert alert-success d-none" role="alert">
+                    <i class="bi bi-check-circle me-2"></i>
+                    Message sent! I'll get back to you soon.
+                  </div>
+                  <div id="formError" class="alert alert-danger d-none" role="alert">
+                    <i class="bi bi-exclamation-circle me-2"></i>
+                    Something went wrong. Please email me directly at
+                    <a href="mailto:nehamarladycs@gmail.com">nehamarladycs@gmail.com</a>.
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- Direct contact options -->
+          <div class="contact-alts d-flex justify-content-center gap-4 mt-4 flex-wrap">
+            <a href="mailto:nehamarladycs@gmail.com" class="contact-alt-link">
+              <i class="bi bi-envelope-fill"></i> nehamarladycs@gmail.com
+            </a>
+            <a href="https://www.linkedin.com/in/nehamarlady/" target="_blank" class="contact-alt-link">
+              <i class="bi bi-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/nehamarlady" target="_blank" class="contact-alt-link">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--  FOOTER  -->
+  <footer class="site-footer">
+    <div class="container text-center">
+      <p class="footer-brand">Neha Marlady<span class="text-teal">.</span></p>
+      <p class="footer-sub">
+        Built with HTML, CSS, Bootstrap &amp; JavaScript ·
+        <a href="https://github.com/nehamarlady" target="_blank">GitHub</a>
+      </p>
+    </div>
+  </footer>
+
 </body>
 </html>
