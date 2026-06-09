@@ -333,3 +333,100 @@ img { max-width: 100%; display: block; }
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
+/* EXPERIENCE — ACCORDION */
+.custom-accordion .accordion-item {
+  background: var(--navy-card);
+  border: 1px solid var(--border);
+  border-radius: 12px !important;
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+}
+
+.custom-accordion .accordion-button {
+  background: var(--navy-card);
+  color: var(--off-white);
+  font-family: var(--font-display);
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+}
+
+.custom-accordion .accordion-button:not(.collapsed) {
+  background: rgba(20, 184, 166, 0.07);
+  color: var(--off-white);
+  border-bottom: 1px solid var(--border);
+  border-radius: 12px 12px 0 0 !important;
+}
+
+.custom-accordion .accordion-button:focus {
+  color: var(--off-white);
+  box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.2);
+}
+
+.custom-accordion .accordion-button::after {
+  filter: invert(0.6) sepia(1) hue-rotate(140deg);
+}
+
+.custom-accordion .accordion-body {
+  background: var(--navy-card);
+  padding: 1.25rem 1.5rem;
+  color: var(--muted);
+}
+
+.acc-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1rem;
+  padding-right: 0.5rem;
+}
+
+.acc-role {
+  display: block;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--off-white);
+}
+.acc-company {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-weight: 400;
+  margin-top: 0.15rem;
+}
+
+.acc-badge {
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 20px;
+  background: rgba(148,163,184,0.12);
+  color: var(--muted);
+  border: 1px solid var(--border);
+}
+.acc-badge-teal {
+  background: var(--teal-glow);
+  color: var(--teal);
+  border-color: rgba(20,184,166,0.3);
+}
+
+.exp-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.75rem 0;
+}
+.exp-list li {
+  padding-left: 1.25rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+.exp-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--teal);
+  font-size: 0.85rem;
+}
