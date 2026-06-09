@@ -93,4 +93,30 @@ document.addEventListener('DOMContentLoaded', () => {
     if (cursor) cursor.style.animation = 'none';
   }
 
+
+  /*  4. Scroll-reveal animation  */
+  const revealStyle = document.createElement('style');
+  revealStyle.textContent = `.revealed { opacity: 1 !important; transform: translateY(0) !important; }`;
+  document.head.appendChild(revealStyle);
+
+  const revealElements = document.querySelectorAll(
+    '.project-card, .skill-card, .about-avatar-wrap, .stat-chip, .accordion-item, .contact-card'
+  );
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  revealElements.forEach((el, i) => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = `opacity 0.5s ease ${i * 0.05}s, transform 0.5s ease ${i * 0.05}s`;
+    revealObserver.observe(el);
+  });
+
 });
