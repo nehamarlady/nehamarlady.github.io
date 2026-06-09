@@ -42,9 +42,9 @@ document.addEventListener("DOMContentLoaded", () => {
   /*  3. Typewriter — looping JS-driven animation  */
   const twEl = document.getElementById("typewriter");
   const phrases = [
-    "I build backends that think.",
-    "I craft APIs that scale.",
-    "I turn ideas into products.",
+    "Build",
+    "Scale",
+    "Innovate",
   ];
 
   const prefersReducedMotion = window.matchMedia(
