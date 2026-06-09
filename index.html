@@ -1,449 +1,663 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Neha Marlady — Software Engineer</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neha Marlady — Software Engineer</title>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Bootstrap 5 -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Bootstrap Icons -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="styles.css" />
-  <!-- Bootstrap JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js" defer></script>
-  <script src="main.js" defer></script>
-</head>
-<body>
-
-  <!--  NAVBAR  -->
-  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand" href="#hero">
-        <span class="brand-nm">NM</span>
-        <span class="brand-dot">.</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
-        aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="bi bi-grid-3x3-gap"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto gap-1">
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!--  HERO  -->
-  <section id="hero" class="hero-section d-flex align-items-center">
-    <div class="hero-grid-bg"></div>
-    <div class="container position-relative">
-      <div class="row align-items-center justify-content-center">
-        <div class="col-lg-8 text-center">
-          <p class="hero-eyebrow justify-content-center">
-            <span class="terminal-dot"></span>
-            <span class="mono">Portland, OR · Open to Opportunities</span>
-          </p>
-          <h1 class="hero-headline">
-            Hi, I'm <span class="text-teal">Neha</span>.
-          </h1>
-          <H2 class="typewriter-line" >
-            <span id="typewriter" class="typewriter-text"></span><span class="tw-cursor">|</span>
-          </h2>
-          <p class="hero-sub mx-auto">
-            MS Computer Science student at Portland State University &amp;
-            Software Engineer with 3+ years of experience crafting scalable APIs,
-            AI-powered tools, and web applications that solve real problems.
-          </p>
-          <div class="hero-cta d-flex gap-3 flex-wrap justify-content-center">
-            <a href="#projects" class="btn btn-teal">
-              <i class="bi bi-folder2-open me-2"></i>View Projects
-            </a>
-            <a href="#contact" class="btn btn-ghost">
-              <i class="bi bi-envelope me-2"></i>Get in Touch
-            </a>
-          </div>
-          <div class="hero-links d-flex gap-4 mt-4 justify-content-center">
-            <a href="https://github.com/nehamarlady" target="_blank" class="social-link">
-              <i class="bi bi-github"></i> nehamarlady
-            </a>
-            <a href="https://www.linkedin.com/in/nehamarlady/" target="_blank" class="social-link">
-              <i class="bi bi-linkedin"></i> nehamarlady
-            </a>
-            <a href="mailto:nehamarladycs@gmail.com" class="social-link">
-              <i class="bi bi-envelope"></i> nehamarladycs@gmail.com
-            </a>
-          </div>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <!--  NAVBAR  -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="#hero">
+          <span class="brand-nm">NM</span>
+          <span class="brand-dot">.</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+          aria-controls="navMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="bi bi-grid-3x3-gap"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto gap-1">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experience">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
-  </section>
+    </nav>
 
-  <!--  ABOUT  -->
-  <section id="about" class="section-pad">
-    <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-4 text-center">
-          <div class="about-avatar-wrap">
-            <img src="https://avatars.githubusercontent.com/u/113354335?v=4"
-              alt="Neha Marlady" class="about-avatar" />
-            <div class="avatar-ring"></div>
-          </div>
-        </div>
-        <div class="col-lg-8">
-          <p class="section-eyebrow">About Me</p>
-          <h2 class="section-title">Building systems,<br />one commit at a time.</h2>
-          <p class="section-body">
-            I'm a Software Engineer with <strong>3+ years of industry experience</strong> currently pursuing my
-            <strong>MS in Computer Science at Portland State University</strong>. My work lives at the
-            intersection of backend engineering and AI — I love designing clean APIs, building LLM-powered tools,
-            and turning complex problems into maintainable code.
-          </p>
-          <p class="section-body">
-            Recently, I built an <strong>interactive web tool that's now live on my university's website</strong>,
-            and I've been deep in MCP server architecture, RAG pipelines and cloud deployments on AWS.
-            Beyond engineering, I serve as a <strong>Student Staff at the International Office</strong>
-            and a <strong>Student Ambassador</strong> for the Maseeh College of Engineering &amp; Computer Science.
-          </p>
-          <p class="section-body">
-            When I'm not coding, you'll find me tending to plants, reading books or watching anime 🎌.
-          </p>
-          <div class="about-stats d-flex gap-4 mt-4 flex-wrap">
-            <div class="stat-chip">
-              <span class="stat-num">3+</span>
-              <span class="stat-label">Years Experience</span>
+    <!--  HERO  -->
+    <section id="hero" class="hero-section d-flex align-items-center">
+      <div class="hero-grid-bg"></div>
+      <div class="container position-relative">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-lg-8 text-center">
+            <p class="hero-eyebrow justify-content-center">
+              <span class="terminal-dot"></span>
+              <span class="mono">Portland, OR · Open to Opportunities</span>
+            </p>
+            <h1 class="hero-headline">
+              Hi, I'm <span class="text-teal">Neha</span>.
+            </h1>
+            <h2 class="typewriter-line">
+              <span id="typewriter" class="typewriter-text"></span
+              ><span class="tw-cursor">|</span>
+            </h2>
+            <p class="hero-sub mx-auto">
+              MS Computer Science student at Portland State University &amp;
+              Software Engineer with 3+ years of experience crafting scalable
+              APIs, AI-powered tools, and web applications that solve real
+              problems.
+            </p>
+            <div class="hero-cta d-flex gap-3 flex-wrap justify-content-center">
+              <a href="#projects" class="btn btn-teal">
+                <i class="bi bi-folder2-open me-2"></i>View Projects
+              </a>
+              <a href="#contact" class="btn btn-ghost">
+                <i class="bi bi-envelope me-2"></i>Get in Touch
+              </a>
             </div>
-            <div class="stat-chip">
-              <span class="stat-num">35</span>
-              <span class="stat-label">GitHub Repos</span>
-            </div>
-            <div class="stat-chip">
-              <span class="stat-num">MS</span>
-              <span class="stat-label">CS @ PSU</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!--  EXPERIENCE  -->
-  <section id="experience" class="section-pad bg-dark-alt">
-    <div class="container">
-      <p class="section-eyebrow text-center">Previous Work</p>
-      <h2 class="section-title text-center mb-5">Where I've contributed</h2>
-
-      <div class="row justify-content-center">
-        <div class="col-lg-9">
-          <div class="accordion custom-accordion" id="experienceAccordion">
-
-            <div class="accordion-item">
-              <h3 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#exp1" aria-expanded="true" aria-controls="exp1">
-                  <div class="acc-header-inner">
-                    <div>
-                      <span class="acc-role">Software Engineer</span>
-                      <span class="acc-company">Taskmonk Technology PVT LTD</span>
-                    </div>
-                    <span class="acc-badge">Full-time</span>
-                  </div>
-                </button>
-              </h3>
-              <div id="exp1" class="accordion-collapse collapse show" data-bs-parent="#experienceAccordion">
-                <div class="accordion-body">
-                  <ul class="exp-list">
-                    <li>Designed and implemented backend REST APIs serving production traffic</li>
-                    <li>Built and maintained interactive web applications using modern JS frameworks</li>
-                    <li>Collaborated cross-functionally in agile environments with strong communication skills</li>
-                    <li>Optimized backend services for performance and scalability</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <h3 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#exp2" aria-expanded="false" aria-controls="exp2">
-                  <div class="acc-header-inner">
-                    <div>
-                      <span class="acc-role">Student Ambassador</span>
-                      <span class="acc-company">Maseeh College of Engineering &amp; CS, PSU</span>
-                    </div>
-                    <span class="acc-badge acc-badge-teal">Leadership</span>
-                  </div>
-                </button>
-              </h3>
-              <div id="exp2" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
-                <div class="accordion-body">
-                  <ul class="exp-list">
-                    <li>Represent the Maseeh College to prospective and current students</li>
-                    <li>Support outreach events, campus tours, and engineering community initiatives</li>
-                    <li>Develop public speaking and professional communication skills</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <h3 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#exp3" aria-expanded="false" aria-controls="exp3">
-                  <div class="acc-header-inner">
-                    <div>
-                      <span class="acc-role">Student Staff</span>
-                      <span class="acc-company">International Office, Portland State University</span>
-                    </div>
-                    <span class="acc-badge acc-badge-teal">Leadership</span>
-                  </div>
-                </button>
-              </h3>
-              <div id="exp3" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
-                <div class="accordion-body">
-                  <ul class="exp-list">
-                    <li>Assist international students with administrative processes and campus integration</li>
-                    <li>Foster an inclusive environment through cross-cultural communication</li>
-                    <li>Coordinate events and resources supporting a diverse student community</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!--  PROJECTS  -->
-  <section id="projects" class="section-pad">
-    <div class="container">
-      <p class="section-eyebrow text-center">Projects</p>
-      <h2 class="section-title text-center mb-2">Things I've built</h2>
-      <p class="section-sub text-center mb-5">A selection of projects spanning AI tooling, backend services, and web apps.</p>
-
-      <div class="row g-4">
-
-        <!-- Project 1 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="project-card h-100">
-            <div class="project-card-inner">
-              <div class="project-icon"><i class="bi bi-cpu"></i></div>
-              <div class="project-tags">
-                <span class="tag">Python</span><span class="tag">MCP</span><span class="tag">Cloud Run</span>
-              </div>
-              <h3 class="project-title">Smart City Info</h3>
-              <p class="project-desc">
-                An MCP server exposing multiple APIs for an LLM agent, deployed in a Cloud Run container.
-                A natural-language client agent interprets queries and performs tasks using the server's tools.
-              </p>
-              <div class="project-links mt-auto">
-                <a href="https://github.com/nehamarlady/Smart-city-info" target="_blank" class="project-link">
-                  <i class="bi bi-github"></i> View Code
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="project-card h-100">
-            <div class="project-card-inner">
-              <div class="project-icon"><i class="bi bi-file-earmark-code"></i></div>
-              <div class="project-tags">
-                <span class="tag">Python</span><span class="tag">LangChain</span><span class="tag">Gemini</span>
-              </div>
-              <h3 class="project-title">LLM Code Documenter</h3>
-              <p class="project-desc">
-                A CLI tool that automatically summarizes Python code and generates docstrings, comments, and
-                README documentation using LangChain and Google Gemini — saving engineers hours of doc work.
-              </p>
-              <div class="project-links mt-auto">
-                <a href="https://github.com/nehamarlady/llm-code-documenter" target="_blank" class="project-link">
-                  <i class="bi bi-github"></i> View Code
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="project-card h-100">
-            <div class="project-card-inner">
-              <div class="project-icon"><i class="bi bi-search"></i></div>
-              <div class="project-tags">
-                <span class="tag">Python</span><span class="tag">RAG</span><span class="tag">NLP</span>
-              </div>
-              <h3 class="project-title">Sectionwise RAG Loader</h3>
-              <p class="project-desc">
-                A section-aware web document loader for Retrieval-Augmented Generation, enabling smarter,
-                context-preserving chunking of web documents for LLM pipelines.
-              </p>
-              <div class="project-links mt-auto">
-                <a href="https://github.com/nehamarlady/sectionwise-rag-loader" target="_blank" class="project-link">
-                  <i class="bi bi-github"></i> View Code
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="project-card h-100">
-            <div class="project-card-inner">
-              <div class="project-icon"><i class="bi bi-diagram-3"></i></div>
-              <div class="project-tags">
-                <span class="tag">HTML</span><span class="tag">JavaScript</span><span class="tag">CSS</span>
-              </div>
-              <h3 class="project-title">Tax Flowchart Helper</h3>
-              <p class="project-desc">
-                An interactive web tool that guides users through tax decision trees using dynamic flowcharts.
-                Currently live on the university website to help students navigate filing requirements.
-              </p>
-              <div class="project-links mt-auto">
-                <a href="https://github.com/nehamarlady/tax-flowchart-helper" target="_blank" class="project-link">
-                  <i class="bi bi-github"></i> View Code
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 5 — Flask Agent -->
-        <div class="col-md-6 col-lg-4">
-          <div class="project-card h-100">
-            <div class="project-card-inner">
-              <div class="project-icon"><i class="bi bi-robot"></i></div>
-              <div class="project-tags">
-                <span class="tag">Python</span><span class="tag">Flask</span><span class="tag">AI</span>
-              </div>
-              <h3 class="project-title">Flask Agent Application</h3>
-              <p class="project-desc">
-                A backend agent application built with Flask, showcasing AI-integrated API design,
-                structured routing, and modular backend architecture for real-world agentic workflows.
-              </p>
-              <div class="project-links mt-auto">
-                <a href="https://github.com/nehamarlady" target="_blank" class="project-link">
-                  <i class="bi bi-github"></i> View on GitHub
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- GitHub CTA card -->
-        <div class="col-md-6 col-lg-4">
-          <div class="project-card project-card-ghost h-100">
-            <div class="project-card-inner text-center d-flex flex-column align-items-center justify-content-center">
-              <i class="bi bi-github ghost-icon"></i>
-              <h3 class="project-title mt-3">35+ Repositories</h3>
-              <p class="project-desc">More projects on GitHub — from data engineering to full-stack apps.</p>
-              <a href="github.com/nehamarlady?tab=repositories" target="_blank" class="btn btn-outline-teal mt-3">
-                View All Projects
+            <div class="hero-links d-flex gap-4 mt-4 justify-content-center">
+              <a
+                href="https://github.com/nehamarlady"
+                target="_blank"
+                class="social-link"
+              >
+                <i class="bi bi-github"></i> nehamarlady
+              </a>
+              <a
+                href="https://www.linkedin.com/in/nehamarlady/"
+                target="_blank"
+                class="social-link"
+              >
+                <i class="bi bi-linkedin"></i> nehamarlady
+              </a>
+              <a href="mailto:nehamarladycs@gmail.com" class="social-link">
+                <i class="bi bi-envelope"></i> nehamarladycs@gmail.com
               </a>
             </div>
           </div>
         </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!--  CONTACT  -->
-  <section id="contact" class="section-pad">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-7 text-center">
-          <p class="section-eyebrow">Contact</p>
-          <h2 class="section-title">Let's build something together.</h2>
-          <p class="section-sub mb-5">
-            I'm actively looking for <strong>software engineering internships and entry-level roles</strong>.
-            Have a project, opportunity, or just want to say hi? I'd love to hear from you.
-          </p>
+    <!--  ABOUT  -->
+    <section id="about" class="section-pad">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-4 d-flex justify-content-center">
+            <div class="about-avatar-wrap">
+              <img
+                src="https://avatars.githubusercontent.com/u/113354335?v=4"
+                alt="Neha Marlady"
+                class="about-avatar"
+              />
+              <div class="avatar-ring"></div>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <p class="section-eyebrow">About Me</p>
+            <h2 class="section-title">
+              Building systems,<br />one commit at a time.
+            </h2>
+            <p class="section-body">
+              I'm a Software Engineer with
+              <strong>3+ years of industry experience</strong> currently
+              pursuing my
+              <strong
+                >MS in Computer Science at Portland State University</strong
+              >. My work lives at the intersection of backend engineering and AI
+              — I love designing clean APIs, building LLM-powered tools, and
+              turning complex problems into maintainable code.
+            </p>
+            <p class="section-body">
+              Recently, I built an
+              <strong
+                >interactive web tool that's now live on my university's
+                website</strong
+              >, and I've been deep in MCP server architecture, RAG pipelines
+              and cloud deployments on AWS. Beyond engineering, I serve as a
+              <strong>Student Staff at the International Office</strong> and a
+              <strong>Student Ambassador</strong> for the Maseeh College of
+              Engineering &amp; Computer Science.
+            </p>
+            <p class="section-body">
+              When I'm not coding, you'll find me tending to plants, reading
+              books or watching anime 🎌.
+            </p>
+            <div class="about-stats d-flex gap-4 mt-4 flex-wrap">
+              <div class="stat-chip">
+                <span class="stat-num">3+</span>
+                <span class="stat-label">Years Experience</span>
+              </div>
+              <div class="stat-chip">
+                <span class="stat-num">35</span>
+                <span class="stat-label">GitHub Repos</span>
+              </div>
+              <div class="stat-chip">
+                <span class="stat-num">MS</span>
+                <span class="stat-label">CS @ PSU</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="row justify-content-center">
-        <div class="col-lg-7">
-          <div class="contact-card">
-            <form id="contactForm" novalidate>
-              <div class="row g-3">
-                <div class="col-md-6">
-                  <label for="contactName" class="form-label">Name</label>
-                  <input type="text" class="form-control custom-input" id="contactName"
-                    placeholder="Your name" required />
-                  <div class="invalid-feedback">Please enter your name.</div>
-                </div>
-                <div class="col-md-6">
-                  <label for="contactEmail" class="form-label">Email</label>
-                  <input type="email" class="form-control custom-input" id="contactEmail"
-                    placeholder="your@email.com" required />
-                  <div class="invalid-feedback">Please enter a valid email.</div>
-                </div>
-                <div class="col-12">
-                  <label for="contactSubject" class="form-label">Subject</label>
-                  <input type="text" class="form-control custom-input" id="contactSubject"
-                    placeholder="What's this about?" required />
-                  <div class="invalid-feedback">Please enter a subject.</div>
-                </div>
-                <div class="col-12">
-                  <label for="contactMessage" class="form-label">Message</label>
-                  <textarea class="form-control custom-input" id="contactMessage" rows="5"
-                    placeholder="Tell me about your project or opportunity..." required></textarea>
-                  <div class="invalid-feedback">Please enter a message.</div>
-                </div>
-                <div class="col-12">
-                  <button type="submit" class="btn btn-teal w-100" id="submitBtn">
-                    <span id="btnText"><i class="bi bi-send me-2"></i>Send Message</span>
-                    <span id="btnSpinner" class="d-none">
-                      <span class="spinner-border spinner-border-sm me-2"></span>Sending...
-                    </span>
+    </section>
+
+    <!--  EXPERIENCE  -->
+    <section id="experience" class="section-pad bg-dark-alt">
+      <div class="container">
+        <p class="section-eyebrow text-center">Previous Work</p>
+        <h2 class="section-title text-center mb-5">Where I've contributed</h2>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <div class="accordion custom-accordion" id="experienceAccordion">
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#exp1"
+                    aria-expanded="true"
+                    aria-controls="exp1"
+                  >
+                    <div class="acc-header-inner">
+                      <div>
+                        <span class="acc-role">Software Engineer</span>
+                        <span class="acc-company"
+                          >Taskmonk Technology PVT LTD</span
+                        >
+                      </div>
+                      <span class="acc-badge">Full-time</span>
+                    </div>
                   </button>
-                </div>
-                <div class="col-12">
-                  <div id="formSuccess" class="alert alert-success d-none" role="alert">
-                    <i class="bi bi-check-circle me-2"></i>
-                    Message sent! I'll get back to you soon.
-                  </div>
-                  <div id="formError" class="alert alert-danger d-none" role="alert">
-                    <i class="bi bi-exclamation-circle me-2"></i>
-                    Something went wrong. Please email me directly at
-                    <a href="mailto:nehamarladycs@gmail.com">nehamarladycs@gmail.com</a>.
+                </h3>
+                <div
+                  id="exp1"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#experienceAccordion"
+                >
+                  <div class="accordion-body">
+                    <ul class="exp-list">
+                      <li>
+                        Designed and implemented backend REST APIs serving
+                        production traffic
+                      </li>
+                      <li>
+                        Built and maintained interactive web applications using
+                        modern JS frameworks
+                      </li>
+                      <li>
+                        Collaborated cross-functionally in agile environments
+                        with strong communication skills
+                      </li>
+                      <li>
+                        Optimized backend services for performance and
+                        scalability
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
-            </form>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#exp2"
+                    aria-expanded="false"
+                    aria-controls="exp2"
+                  >
+                    <div class="acc-header-inner">
+                      <div>
+                        <span class="acc-role">Student Ambassador</span>
+                        <span class="acc-company"
+                          >Maseeh College of Engineering &amp; CS, PSU</span
+                        >
+                      </div>
+                      <span class="acc-badge acc-badge-teal">Leadership</span>
+                    </div>
+                  </button>
+                </h3>
+                <div
+                  id="exp2"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#experienceAccordion"
+                >
+                  <div class="accordion-body">
+                    <ul class="exp-list">
+                      <li>
+                        Represent the Maseeh College to prospective and current
+                        students
+                      </li>
+                      <li>
+                        Support outreach events, campus tours, and engineering
+                        community initiatives
+                      </li>
+                      <li>
+                        Develop public speaking and professional communication
+                        skills
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#exp3"
+                    aria-expanded="false"
+                    aria-controls="exp3"
+                  >
+                    <div class="acc-header-inner">
+                      <div>
+                        <span class="acc-role">Student Staff</span>
+                        <span class="acc-company"
+                          >International Office, Portland State University</span
+                        >
+                      </div>
+                      <span class="acc-badge acc-badge-teal">Leadership</span>
+                    </div>
+                  </button>
+                </h3>
+                <div
+                  id="exp3"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#experienceAccordion"
+                >
+                  <div class="accordion-body">
+                    <ul class="exp-list">
+                      <li>
+                        Assist international students with administrative
+                        processes and campus integration
+                      </li>
+                      <li>
+                        Foster an inclusive environment through cross-cultural
+                        communication
+                      </li>
+                      <li>
+                        Coordinate events and resources supporting a diverse
+                        student community
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          
-          
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!--  FOOTER  -->
-  <footer class="site-footer" >
-    <div class="container text-center">
-      <p class="footer-brand" aria-hidden="true">Neha Marlady<span class="text-teal">.</span></p>
-      <p class="footer-sub">
-        Built with HTML, CSS, Bootstrap &amp; JavaScript ·
-        <a href="https://github.com/nehamarlady" target="_blank">GitHub</a>
-      </p>
-    </div>
-  </footer>
+    <!--  PROJECTS  -->
+    <section id="projects" class="section-pad">
+      <div class="container">
+        <p class="section-eyebrow text-center">Projects</p>
+        <h2 class="section-title text-center mb-2">Things I've built</h2>
+        <p class="section-sub text-center mb-5">
+          A selection of projects spanning AI tooling, backend services, and web
+          apps.
+        </p>
 
-</body>
+        <div class="row g-4">
+          <!-- Project 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="project-card h-100">
+              <div class="project-card-inner">
+                <div class="project-icon"><i class="bi bi-cpu"></i></div>
+                <div class="project-tags">
+                  <span class="tag">Python</span><span class="tag">MCP</span
+                  ><span class="tag">Cloud Run</span>
+                </div>
+                <h3 class="project-title">Smart City Info</h3>
+                <p class="project-desc">
+                  An MCP server exposing multiple APIs for an LLM agent,
+                  deployed in a Cloud Run container. A natural-language client
+                  agent interprets queries and performs tasks using the server's
+                  tools.
+                </p>
+                <div class="project-links mt-auto">
+                  <a
+                    href="https://github.com/nehamarlady/Smart-city-info"
+                    target="_blank"
+                    class="project-link"
+                  >
+                    <i class="bi bi-github"></i> View Code
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="project-card h-100">
+              <div class="project-card-inner">
+                <div class="project-icon">
+                  <i class="bi bi-file-earmark-code"></i>
+                </div>
+                <div class="project-tags">
+                  <span class="tag">Python</span
+                  ><span class="tag">LangChain</span
+                  ><span class="tag">Gemini</span>
+                </div>
+                <h3 class="project-title">LLM Code Documenter</h3>
+                <p class="project-desc">
+                  A CLI tool that automatically summarizes Python code and
+                  generates docstrings, comments, and README documentation using
+                  LangChain and Google Gemini — saving engineers hours of doc
+                  work.
+                </p>
+                <div class="project-links mt-auto">
+                  <a
+                    href="https://github.com/nehamarlady/llm-code-documenter"
+                    target="_blank"
+                    class="project-link"
+                  >
+                    <i class="bi bi-github"></i> View Code
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="project-card h-100">
+              <div class="project-card-inner">
+                <div class="project-icon"><i class="bi bi-search"></i></div>
+                <div class="project-tags">
+                  <span class="tag">Python</span><span class="tag">RAG</span
+                  ><span class="tag">NLP</span>
+                </div>
+                <h3 class="project-title">Sectionwise RAG Loader</h3>
+                <p class="project-desc">
+                  A section-aware web document loader for Retrieval-Augmented
+                  Generation, enabling smarter, context-preserving chunking of
+                  web documents for LLM pipelines.
+                </p>
+                <div class="project-links mt-auto">
+                  <a
+                    href="https://github.com/nehamarlady/sectionwise-rag-loader"
+                    target="_blank"
+                    class="project-link"
+                  >
+                    <i class="bi bi-github"></i> View Code
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="project-card h-100">
+              <div class="project-card-inner">
+                <div class="project-icon"><i class="bi bi-diagram-3"></i></div>
+                <div class="project-tags">
+                  <span class="tag">HTML</span
+                  ><span class="tag">JavaScript</span
+                  ><span class="tag">CSS</span>
+                </div>
+                <h3 class="project-title">Tax Flowchart Helper</h3>
+                <p class="project-desc">
+                  An interactive web tool that guides users through tax decision
+                  trees using dynamic flowcharts. Currently live on the
+                  university website to help students navigate filing
+                  requirements.
+                </p>
+                <div class="project-links mt-auto">
+                  <a
+                    href="https://github.com/nehamarlady/tax-flowchart-helper"
+                    target="_blank"
+                    class="project-link"
+                  >
+                    <i class="bi bi-github"></i> View Code
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5 — Flask Agent -->
+          <div class="col-md-6 col-lg-4">
+            <div class="project-card h-100">
+              <div class="project-card-inner">
+                <div class="project-icon"><i class="bi bi-robot"></i></div>
+                <div class="project-tags">
+                  <span class="tag">Python</span><span class="tag">Flask</span
+                  ><span class="tag">AI</span>
+                </div>
+                <h3 class="project-title">Flask Agent Application</h3>
+                <p class="project-desc">
+                  A backend agent application built with Flask, showcasing
+                  AI-integrated API design, structured routing, and modular
+                  backend architecture for real-world agentic workflows.
+                </p>
+                <div class="project-links mt-auto">
+                  <a
+                    href="https://github.com/nehamarlady"
+                    target="_blank"
+                    class="project-link"
+                  >
+                    <i class="bi bi-github"></i> View on GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- GitHub CTA card -->
+          <div class="col-md-6 col-lg-4">
+            <div class="project-card project-card-ghost h-100">
+              <div
+                class="project-card-inner text-center d-flex flex-column align-items-center justify-content-center"
+              >
+                <i class="bi bi-github ghost-icon"></i>
+                <h3 class="project-title mt-3">35+ Repositories</h3>
+                <p class="project-desc">
+                  More projects on GitHub — from data engineering to full-stack
+                  apps.
+                </p>
+                <a
+                  href="github.com/nehamarlady?tab=repositories"
+                  target="_blank"
+                  class="btn btn-outline-teal mt-3"
+                >
+                  View All Projects
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  CONTACT  -->
+    <section id="contact" class="section-pad">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-7 text-center">
+            <p class="section-eyebrow">Contact</p>
+            <h2 class="section-title">Let's build something together.</h2>
+            <p class="section-sub mb-5">
+              I'm actively looking for
+              <strong
+                >software engineering internships and entry-level roles</strong
+              >. Have a project, opportunity, or just want to say hi? I'd love
+              to hear from you.
+            </p>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-7">
+            <div class="contact-card">
+              <form id="contactForm" novalidate>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="contactName" class="form-label">Name</label>
+                    <input
+                      type="text"
+                      class="form-control custom-input"
+                      id="contactName"
+                      placeholder="Your name"
+                      required
+                    />
+                    <div class="invalid-feedback">Please enter your name.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="contactEmail" class="form-label">Email</label>
+                    <input
+                      type="email"
+                      class="form-control custom-input"
+                      id="contactEmail"
+                      placeholder="your@email.com"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Please enter a valid email.
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <label for="contactSubject" class="form-label"
+                      >Subject</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control custom-input"
+                      id="contactSubject"
+                      placeholder="What's this about?"
+                      required
+                    />
+                    <div class="invalid-feedback">Please enter a subject.</div>
+                  </div>
+                  <div class="col-12">
+                    <label for="contactMessage" class="form-label"
+                      >Message</label
+                    >
+                    <textarea
+                      class="form-control custom-input"
+                      id="contactMessage"
+                      rows="5"
+                      placeholder="Tell me about your project or opportunity..."
+                      required
+                    ></textarea>
+                    <div class="invalid-feedback">Please enter a message.</div>
+                  </div>
+                  <div class="col-12">
+                    <button
+                      type="submit"
+                      class="btn btn-teal w-100"
+                      id="submitBtn"
+                    >
+                      <span id="btnText"
+                        ><i class="bi bi-send me-2"></i>Send Message</span
+                      >
+                      <span id="btnSpinner" class="d-none">
+                        <span
+                          class="spinner-border spinner-border-sm me-2"
+                        ></span
+                        >Sending...
+                      </span>
+                    </button>
+                  </div>
+                  <div class="col-12">
+                    <div
+                      id="formSuccess"
+                      class="alert alert-success d-none"
+                      role="alert"
+                    >
+                      <i class="bi bi-check-circle me-2"></i>
+                      Message sent! I'll get back to you soon.
+                    </div>
+                    <div
+                      id="formError"
+                      class="alert alert-danger d-none"
+                      role="alert"
+                    >
+                      <i class="bi bi-exclamation-circle me-2"></i>
+                      Something went wrong. Please email me directly at
+                      <a href="mailto:nehamarladycs@gmail.com"
+                        >nehamarladycs@gmail.com</a
+                      >.
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  FOOTER  -->
+    <footer class="site-footer">
+      <div class="container text-center">
+        <p class="footer-brand" aria-hidden="true">
+          Neha Marlady<span class="text-teal">.</span>
+        </p>
+        <p class="footer-sub">
+          Built with HTML, CSS, Bootstrap &amp; JavaScript ·
+          <a
+            href="https://github.com/nehamarlady"
+            target="_blank"
+            aria-label="github"
+            >GitHub</a
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>
