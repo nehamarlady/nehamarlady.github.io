@@ -28,9 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
-      // Only act when the menu is actually open (mobile)
       if (navMenu.classList.contains('show')) {
-        // Use Bootstrap's API — get existing instance or create one
         let bsCollapse = bootstrap.Collapse.getInstance(navMenu);
         if (!bsCollapse) {
           bsCollapse = new bootstrap.Collapse(navMenu, { toggle: false });
@@ -39,5 +37,60 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+
+  /*  3. Typewriter — looping JS-driven animation  */
+  const twEl = document.getElementById('typewriter');
+  const phrases = [
+    'I build backends that think.',
+    'I craft APIs that scale.',
+    'I turn ideas into products.',
+  ];
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (twEl && !prefersReducedMotion) {
+    let phraseIndex = 0;
+    let charIndex   = 0;
+    let isDeleting  = false;
+
+    const TYPE_SPEED   = 60;
+    const DELETE_SPEED = 35;
+    const PAUSE_END    = 1800;
+    const PAUSE_START  = 400;
+
+    function tick() {
+      const current = phrases[phraseIndex];
+
+      if (!isDeleting) {
+        charIndex++;
+        twEl.textContent = current.slice(0, charIndex);
+        if (charIndex === current.length) {
+          isDeleting = true;
+          setTimeout(tick, PAUSE_END);
+          return;
+        }
+        setTimeout(tick, TYPE_SPEED);
+      } else {
+        charIndex--;
+        twEl.textContent = current.slice(0, charIndex);
+        if (charIndex === 0) {
+          isDeleting = false;
+          phraseIndex = (phraseIndex + 1) % phrases.length;
+          setTimeout(tick, PAUSE_START);
+          return;
+        }
+        setTimeout(tick, DELETE_SPEED);
+      }
+    }
+
+    twEl.textContent = '';
+    setTimeout(tick, 600);
+
+  } else if (twEl) {
+    twEl.textContent = phrases[0];
+    const cursor = document.querySelector('.tw-cursor');
+    if (cursor) cursor.style.animation = 'none';
+  }
 
 });

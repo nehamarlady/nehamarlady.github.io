@@ -171,3 +171,105 @@ img { max-width: 100%; display: block; }
   color: var(--navy);
   transform: translateY(-1px);
 }
+
+/* HERO */
+.hero-section {
+  min-height: 100vh;
+  padding-top: 90px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Dot grid background */
+.hero-grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(148,163,184,0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+}
+
+/* Subtle teal glow bottom-left */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(20,184,166,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-bottom: 1.25rem;
+}
+
+.terminal-dot {
+  width: 8px; height: 8px;
+  background: var(--teal);
+  border-radius: 50%;
+  display: inline-block;
+  animation: blink-dot 2s infinite;
+}
+@keyframes blink-dot {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+
+.hero-headline {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--off-white);
+  margin-bottom: 0.25rem;
+}
+
+.typewriter-line {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--teal);
+  margin-bottom: 1.5rem;
+  min-height: 1.2em;
+}
+
+.typewriter-text {
+  color: var(--teal);
+  white-space: nowrap;
+}
+
+.tw-cursor {
+  color: var(--teal);
+  font-weight: 300;
+  animation: blink-cursor 0.8s step-end infinite;
+}
+@keyframes blink-cursor {
+  0%, 100% { border-color: var(--teal); }
+  50%       { border-color: transparent; }
+}
+
+.hero-sub {
+  font-size: 1.05rem;
+  color: var(--muted);
+  max-width: 560px;
+  margin-bottom: 2rem;
+}
+
+.social-link {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.2s;
+}
+.social-link:hover { color: var(--teal); }
