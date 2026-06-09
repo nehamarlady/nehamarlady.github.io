@@ -111,6 +111,19 @@ The site is deployed using **GitHub Pages** from the `main` branch.
 
 ---
 
+# Lighthouse Scores
+ 
+![Lighthouse Scores](lighthouse.png)
+ 
+| Category | Score |
+|---|---|
+| Performance | 97 |
+| Accessibility | 94 |
+| Best Practices | 100 |
+| SEO | 100 |
+ 
+---
+
 ## Contact
 
 **Neha Marlady**
