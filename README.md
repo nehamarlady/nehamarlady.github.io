@@ -2,8 +2,8 @@
 
 A professional single-page portfolio website built with HTML, CSS, Bootstrap 5 and Vanilla JavaScript. The site highlights my background, work experience, projects and includes a working contact form.
 
-🔗 **Live Site:** https://nehamarlady.github.io
-📁 **GitHub Repo:** https://github.com/nehamarlady/nehamarlady.github.io
+**Live Site:** https://nehamarlady.github.io
+**GitHub Repo:** https://github.com/nehamarlady/nehamarlady.github.io
 
 ---
 
