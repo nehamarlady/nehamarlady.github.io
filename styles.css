@@ -316,10 +316,10 @@ img {
 @keyframes blink-cursor {
   0%,
   100% {
-    opacity: 1;
+    visibility: visible;
   }
   50% {
-    opacity: 0;
+    visibility: hidden;
   }
 }
 
