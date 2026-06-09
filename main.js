@@ -88,74 +88,36 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(tick, 600);
 
   } else if (twEl) {
+    // Reduced motion: show static text, toggle CSS class to stop cursor blinking
     twEl.textContent = phrases[0];
-    const cursor = document.querySelector('.tw-cursor');
-    if (cursor) cursor.style.animation = 'none';
+    document.querySelector('.tw-cursor')?.classList.add('tw-cursor--hidden');
   }
 
 
   /*  4. Scroll-reveal animation  */
-  const revealStyle = document.createElement('style');
-  revealStyle.textContent = `.revealed { opacity: 1 !important; transform: translateY(0) !important; }`;
-  document.head.appendChild(revealStyle);
 
   const revealElements = document.querySelectorAll(
-    '.project-card, .skill-card, .about-avatar-wrap, .stat-chip, .accordion-item, .contact-card'
+    '.project-card, .about-avatar-wrap, .stat-chip, .accordion-item, .contact-card'
   );
 
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('revealed');
+        entry.target.classList.replace('reveal-hidden', 'revealed');
         revealObserver.unobserve(entry.target);
       }
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
   revealElements.forEach((el, i) => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = `opacity 0.5s ease ${i * 0.05}s, transform 0.5s ease ${i * 0.05}s`;
+    // Only the dynamic stagger delay lives here — everything else is in CSS
+    el.style.setProperty('--reveal-delay', `${i * 0.05}s`);
+    el.classList.add('reveal-hidden');
     revealObserver.observe(el);
   });
 
 
-  /*  5. Project card tag hover  */
-  document.querySelectorAll('.project-card').forEach(card => {
-    card.addEventListener('mouseenter', () => {
-      card.querySelectorAll('.tag').forEach((tag, i) => {
-        tag.style.transition = `background 0.2s ${i * 0.05}s, color 0.2s ${i * 0.05}s`;
-        tag.style.background = 'rgba(20, 184, 166, 0.15)';
-        tag.style.color = '#14B8A6';
-        tag.style.borderColor = 'rgba(20, 184, 166, 0.3)';
-      });
-    });
-    card.addEventListener('mouseleave', () => {
-      card.querySelectorAll('.tag').forEach(tag => {
-        tag.style.background = '';
-        tag.style.color = '';
-        tag.style.borderColor = '';
-      });
-    });
-  });
-
-
-  /*  6. Skill card list hover  */
-  document.querySelectorAll('.skill-card').forEach(card => {
-    const items = card.querySelectorAll('.skill-list li');
-    card.addEventListener('mouseenter', () => {
-      items.forEach((item, i) => {
-        item.style.transition = `color 0.2s ${i * 0.05}s, padding-left 0.2s ${i * 0.05}s`;
-        item.style.paddingLeft = '0.5rem';
-      });
-    });
-    card.addEventListener('mouseleave', () => {
-      items.forEach(item => { item.style.paddingLeft = ''; });
-    });
-  });
-
-
-  /*  7. Contact form validation & submission  */
+  /*  5. Contact form validation & submission  */
   const form        = document.getElementById('contactForm');
   const submitBtn   = document.getElementById('submitBtn');
   const btnText     = document.getElementById('btnText');
